@@ -1,4 +1,5 @@
 import { canvas, ctx } from "../main";
+import playerPath from "/assets/player.png";
 
 const GRAVITY = 0.5;
 const BOUNCE = 0;
@@ -27,7 +28,7 @@ export class Player {
   constructor(width: number, height: number, x: number, y: number) {
     [this.width, this.height, this.x, this.y] = [width, height, x, y];
     this.image = new Image(this.width, this.height);
-    this.image.src = "/assets/player.png";
+    this.image.src = playerPath;
   }
 
   update() {
